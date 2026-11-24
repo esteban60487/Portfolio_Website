@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Manrope:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+  
+    <title>Van Sky Esteban | Data Analytics</title>
+    <meta name="description" content= "Felix E Van Sky Esteban's Portfolio, an IT student learning data analytics with Excel, SQL and Power BI.">
+</head>
+
+<body>
+    <header class="top"> 
+        <div class="wrap">
+            <a class="logo" href="index.html">Sky Data Analytics</a>
+            <button class="menu-btn" id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"
+            aria-controls="nav">☰</button>
+            <nav id="nav" aria-label="Main">
+                <a class="on" href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="theme" type="button">Dark Mode</button>
+            </nav>
+        </div>
+    </header>  
+
+    <main>
+        <div class="wrap hero">
+            <div>
+                <h1>Felix E Van Sky Esteban</h1>
+                <p>Second-year IT student building data analytics projects. I clean messy data, build Excel dashboards, 
+                    and I'm learning SQL and Power BI to answer questions with data.</p>
+            <div class="btns">
+                <a class="btn" href="projects.html">See my projects</a>
+                <a class="btn ghost" href="https://github.com/Ski1ing" target="_blank" rel="noopener">Github Profile</a>
+            </div>
+            </div>
+            <div class="editor" aria-label="A SQL query describing me">
+                <div class="bar"><i></i><i></i><i></i><span>about_me.sql</span></div>
+                <pre id="typed"></pre>
+                <div class="result" id="result" hidden>
+                    <table>
+                        <tr>
+                            <th>name</th>
+                            <th>year_level</th>
+                            <th>focus</th>
+                            <th>tools</th>
+                        </tr>
+                        <tr>
+                            <td>Felix E Van Sky Esteban</td>
+                            <td>2nd-year IT</td>
+                            <td>Data analytics</td>
+                            <td>Excel, SQL, Power BI</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <section class="wrap" id="about">
+            <h2>About Me</h2>
+            <p>I'm a college student interested in data analytics. So far my projects cover data cleaning, Excel 
+                dashboards, PivotTables, and basic data analysis. Right now I'm practicing SQL and getting ready to 
+                learn Power BI properly.</p>
+            <div class="grid g3">
+                <div class="card">
+                    <div class="row">
+                        <h3>Excel</h3>
+                        <span class="badge done">Using it</span>
+                    </div>
+                    <p>PivotTables, PivotCharts, slicers, Power Query, and dashboards. 3 projects completed.</p>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <h3>SQL</h3>
+                        <span class="badge done">Learning</span>
+                    </div>
+                    <p>MySQL queries with aggregation, JOINs, and GROUP BY, CTEs, and window functions. 1 project with 
+                        20 queries.</p>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <h3>Poer BI</h3>
+                        <span class="badge done">Up next</span>
+                    </div>
+                    <p>Turning my SQL analysis into an interactive dashboard with filters and KPI cards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap" id="sql">
+            <h2>Latest Project: Restaurant Sales Analysis</h2>
+            <p class="sub">20 MySQL queries that answer questions about a restaurant's orders and menu, from simple 
+                counts to CTEs and window functions.</p>
+            <div class="grid g2">
+                <div class="card">
+                    <h3>What the queries cover:</h3>
+                    <ul class="stages">
+                        <li class="done">
+                            <span class="dot">✓</span>Order and item counts (Q1 to Q4)</li>
+                        <li class="done">
+                            <span class="dot">✓</span>Menu items and prices (Q5 to Q8)</li>
+                        <li class="done">
+                            <span class="dot">✓</span>Revenue by item and category (Q9 to Q13)</li>
+                        <li class="done">
+                            <span class="dot">✓</span>Dates, hours, and days of the week (Q14 to Q18)</li>
+                        <li class="done">
+                            <span class="dot">✓</span>CTE, window function, and subquery (Q19 to Q20)</li>
+                    </ul>
+                    <p style="margin-top:12px">Two tables, <code>order_details</code> and <code>menu_items</code>, 
+                    are joined so every order is linked to its menu item and price.</p>
+                    <div class="btns">
+                        <a class="btn" href="projects.html#foot">Browse the queries</a>
+                        <a class="btn ghost" 
+                            href="https://github.com/Ski1ing/sky_data_analytics_portfolio/blob/main/Restaurant-Sale-Analysis(SQL)/Restaurant%20Sales%20Analysis.sql" 
+                            target="_blank" rel="noopener">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Example: Top 3 items per category</h3>
+                    <div id="featured-query"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap" id="projects">
+            <div class="row">
+                <h2>Excel Projects</h2>
+                <a href="projects.html">All Projects</a>
+            </div>
+            <p class="sub">Three completed analyses, each with files on GitHub.</p>
+            <div class="grid g3" id="project-preview"></div>
+        </section>
+
+        <section class="wrap" id="contact">
+            <h2>Contact</h2>
+            <p class="sub">Want to talk about a project or an opportunity? Send me a message.</p>
+            <form id=contact-form>
+                <div>
+                    <label for="n">Your name</label>
+                    <input id="n" name="name" required>
+                </div>
+                <div>
+                    <label for="m">Message</label>
+                    <textarea id="m" name="message" rows="4" required></textarea>
+                </div>
+                <div class="btns">
+                    <button class="btn" type="submit">Send by email</button>
+                    <button class="btn ghost" id="copy-email" type="button">Copy my email</button>
+                </div>
+            </form>
+        </section>
+    </main>  
+
+    <footer>
+        <div class="wrap">
+            © <span class="year"></span> Van Sky Esteban. Built with HTML, CSS and JavaScript. Last updated November 2026.
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+    <script src="queries.js"></script>
+</body>
+</html>
