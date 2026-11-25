@@ -110,7 +110,7 @@ setTimeout(() => {
 // Hero: typed SQL query
 const q = document.getElementById("typed");
 if (q) {
-    const text = "SELECT name, year_level, focus, tools\nFROM student\nWHERE name = 'Van Sky Esteban';";
+    const text = "SELECT name, year_level, focus, tools\nFROM student\nWHERE name = 'Felix E Van Sky Esteban';";
     const colour = s => s
         .replace(/\b(SELECT|FROM|WHERE)\b/g, '<span class="kw">$1</span>')
         .replace(/'[^']*'/g, '<span class="str">$&</span>');
